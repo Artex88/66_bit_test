@@ -1,14 +1,9 @@
-version: '3.8'
-
 services:
     port1:
       image: hub.66bit.ru/shared/images/devops-practice
       container_name: port1
       environment:
         - ASP_INSTANCE_NAME=port1
-      ports:
-        - 8080:80
-        - 8443:443
       networks: 
         - "network"
     port2:
@@ -16,9 +11,6 @@ services:
       container_name: port2
       environment:
         - ASP_INSTANCE_NAME=port2
-      ports:
-        - 8081:80
-        - 9443:443
       networks: 
         - "network"
     port3:
@@ -26,9 +18,6 @@ services:
       container_name: port3
       environment:
         - ASP_INSTANCE_NAME=port3
-      ports:
-        - 8082:80
-        - 10443:443
       networks: 
         - "network"
     port4:
@@ -36,9 +25,6 @@ services:
       container_name: port4
       environment:
         - ASP_INSTANCE_NAME=port4
-      ports:
-        - 8083:80
-        - 11443:443
       networks: 
         - "network"
     nginx-server:
